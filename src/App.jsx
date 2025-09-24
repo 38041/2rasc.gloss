@@ -1,10 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Liphoney from './assets/gloss-Liphoney.webp'
-import bunny from './assets/gloss-bunny.webp'
-import gloss from './assets/gloss-3.webp'
-import banner from './assets/banner.webp'
-import LOGO from './assets/logo.webp'
+import Carmy from './assets/love-kit01.webp'
+import Cjoa from './assets/lip-bunny01.webp'
+import Curs from './assets/honey.webp'
+import Slider1 from './assets/banner1.webp'
+import Slider2 from './assets/banner2.png'
+import Slider3 from './assets/banner3.webp'
+import Slider4 from './assets/banner4.jfif'
+import Logo from './assets/lOGO1.webp'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +19,7 @@ function App() {
     <>
       <main>
         <header>
-        <produtos
+          <Swiper
             modules={[Autoplay]}
             spaceBetween={0}
             slidesPerView={1}
@@ -22,7 +28,8 @@ function App() {
               disableOnInteraction: false,
             }}
             loop={true}
-
+            className="mySwiper"
+          >
             <SwiperSlide>
               <img src={Slider1} alt="Slide 1" />
             </SwiperSlide>
@@ -42,11 +49,11 @@ function App() {
           {/* Produto 1 */}
           <a href="#" className="link-card">
             <div className="card">
-              <img src={Liphoney} alt="" className="img-prod"/>
-              <h2>GLOSS FRAN BY FRANCINY EHLKE LIPHONEY</h2>
-              <p className="desc">Referência:   40103  Modelo/Marca:  Mboom</p>
+              <img src={Cjoa} alt="" className="img-card" />
+              <h2 className="titulo-card">GLOSS FRAN BY FRANCINY EHLKE LIPHONEYa</h2>
+              <p className="desc">Referência:   40103  Modelo/Marca:  Mboom)</p>
               <p className="preco">R$ 69,90</p>
-              <div className="avaliacao"> <span>★ ★ ★ ★ ☆</span>(472)</div>
+              <div className="avaliacao"> <span>★ ★ ★ ★ ★</span> (72)</div>
               <div className="off">- 15%</div>
             </div>
           </a>
@@ -54,49 +61,54 @@ function App() {
           {/* Produto 2 */}
           <a href="#" className="link-card">
             <div className="card">
-              <img src={gloss} alt="" className="img-prod"/>
-              <h2>KIT FRAN GLOSSLICIOUS BY FRANCINY EHLKE</h2>
+              <img src={Carmy} alt="" className="img-card" />
+              <h2 className="titulo-card">KIT FRAN GLOSSLICIOUS BY FRANCINY EHLKE</h2>
               <p className="desc">Referência:   12103 Modelo/Marca:   Mboom</p>
               <p className="preco">R$ 109,90</p>
-              <div className="avaliacao">  <span>★ ★ ★ ☆ ☆</span>(128)</div>
-              <div className="off">- 15%</div>
+              <div className="avaliacao"> <span>★ ★ ★ ★ ☆</span> (15)</div>
+              <div className="off">- 5%</div>
             </div>
           </a>
 
           {/* Produto 3 */}
           <a href="#" className="link-card">
             <div className="card">
-              <img src={bunny} alt="" className="img-prod"/>
-              <h2>GLOSS FRAN BY FRANCINY EHLKE LIP BUNNY</h2>
-              <p className="desc">Referência:   40104   Modelo/Marca:   Mboom</p>
+              <img src={Curs} alt="" className="img-card" />
+              <h2 className="titulo-card">GLOSS FRAN BY FRANCINY EHLKE LIP BUNN</h2>
+              <p className="desc">Referência:   40104   Modelo/Marca:   Mboom</p>
               <p className="preco">R$ 65,90</p>
-              <div className="avaliacao">  <span>★ ★ ★ ★ ★</span>(28)</div>
-              <div className="off">- 15%</div>
+              <div className="avaliacao"> <span>★ ★ ★ ★ ★</span> (302)</div>
+              <div className="off">- 10%</div>
             </div>
           </a>
 
         </section>
         <section className="destaque">
-           <iframe src="https://www.youtube.com/embed/3VKnbGeC2IE?autoplay=1&mute=1&controls=0&loop=1&playlist=3VKnbGeC2IE&modestbranding=1&showinfo=0" frameborder="0" allow="autoplay; fullscreen"></iframe>
+
+          <iframe src="https://www.youtube.com/watch?v=1OalUfTGmWA" frameborder="0" allow="autoplay; fullscreen"></iframe>
+          <iframe src="" frameborder="0" allow="autoplay; fullscreen"></iframe>
 
         </section>
+        
         <footer>
-           <img src={Logo} alt="" className="logo-footer" />
 
-      <div className="social-icons">
-      <div className="icon">
-       <img src="" alt="" id="instagram" />
-    </div>
-    <div className="icon">
-       <img src="" alt="" id="discord" />
-    </div>
-    <div className="icon">
-      <img src="" alt="" id="x" />
-    </div>
-    <div className="icon">
-      <img src="" alt="" id="youtube" />
-     </div>
-  </div>
+          <img src={Logo} alt="" className="logo-footer" />
+
+          <div className="social-icons">
+            <div className="icon">
+              <img src="" alt="" id="instagram" />
+            </div>
+            <div className="icon">
+              <img src="" alt="" id="discord" />
+            </div>
+            <div className="icon">
+              <img src="" alt="" id="x" />
+            </div>
+            <div className="icon">
+              <img src="" alt="" id="youtube" />
+            </div>
+          </div>
+
         </footer>
       </main>
     </>
